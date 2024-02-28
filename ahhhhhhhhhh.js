@@ -1,5 +1,5 @@
 const grid = document.querySelector('grid');
-const cards = [ ];
+const cards = [ 😢,😢,😒,😒,😶‍🌫️,😶‍🌫️,😖,😖,😪,😪,😭,😭,😱,😱,🥶,🥶,😡,😡,🤢,🤢,🤠,🤠,🥸,🥸,🤡,🤡,🤫,🤫,🤓,🤓];
 let firstCard, secondCard;
 let lockBoard = false;
 let score = 0;
