@@ -1,5 +1,5 @@
 const grid = document.querySelector('grid');
-const cards = [ 😢,😢,😒,😒,😶‍🌫️,😶‍🌫️,😖,😖,😪,😪,😭,😭,😱,😱,🥶,🥶,😡,😡,🤢,🤢,🤠,🤠,🥸,🥸,🤡,🤡,🤫,🤫,🤓,🤓];
+const cards = [ '😢','😢','😒','😒','😶‍🌫️','😶‍🌫️','😖','😖','😪','😪','😭','😭','😱','😱','🥶','🥶','😡','😡','🤢','🤢','🤠','🤠','🥸','🥸','🤡','🤡','🤫','🤫','🤓','🤓'];
 let firstCard, secondCard;
 let lockBoard = false;
 let score = 0;
@@ -69,7 +69,7 @@ function reset() {
 }
 function restart() {
     reset();
-    shuffleCards();
+    shuffle();
     score = 0;
     document.querySelector('.score').textContent = score;
     grid.innerHTML = '';

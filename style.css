@@ -1,7 +1,7 @@
 body {
     min-height: 100vh;
     min-width: 100vw;
-    background-color: #12181f;
+    background-color: #9f8d1f;
     color: #fff;
 }
 h1 {
@@ -22,7 +22,7 @@ p {
     padding: 8px 16px;
     font-size:30px;
     border-radius: 10px;
-    background-color: #27ae60;
+    background-color: #e8654b;
     color: #fff;
 }
 .grid {
@@ -65,7 +65,7 @@ p {
     transform: rotateY(180deg);
 }
 .card .back {
-    background-image: /*put image here*/;
+    background-image: url(./images/th.jpg);
     background-position: center center;
     background-size: cover;
     backface-visibility: hidden;
