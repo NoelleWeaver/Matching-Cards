@@ -1,81 +1,74 @@
-body {
-    min-height: 100vh;
-    min-width: 100vw;
-    background-color: #9f8d1f;
-    color: #fff;
+*{
+    margin: 0;
+    padding:0;
+    box-sizing:border-box;
 }
-h1 {
-    text-align: center;
-    font-weight: 700;
-    font-size: 50px;
-}
-p {
-    text-align: center;
-    font-size: 30px;
-    font-weight: bold;
-}
-.stuff {
-    display: flex;
-    justify-content: center;
-}
-.stuff button {
-    padding: 8px 16px;
-    font-size:30px;
-    border-radius: 10px;
-    background-color: #e8654b;
-    color: #fff;
-}
-.grid {
-    display: grid;
-    justify-content: center;
-    grid-gap: 16px;
-    grid-template-columns: repeat(6, 140px);
-    grid-template-rows: repeat(2, calc(140px / 2* 3));
-}
-.card {
-    height: calc(140px / 2 * 3);
-    width: 140px;
-    border-radius: 10px;
-    background: #fff;
-    position: relative;
-    transform-style: preserve-3d;
-    transition: all 0.5s ease-in-out;
-}
-.front-image {
-    width: 60px;
-    height: 60px;
-}
-.card.flipped {
-    transform: rotateY(180deg);
-}
-.front,
-.back {
-    backface-visibility: hidden;
-    position: absoulte;
-    border-radius: 10px;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-}
-.card .front {
+body{
     display: flex;
     justify-content: center;
     align-items: center;
-    transform: rotateY(180deg);
+    background: #a5988c;
 }
-.card .back {
-    background-image: url(./images/th.jpg);
-    background-position: center center;
-    background-size: cover;
+.container{
+    position: relative;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    background: #6f5741;
+    padding: 40px 60px;
+}
+h1{
+    font-size: 3em;
+    color:#fff;
+}
+.reset{
+    padding: 15px 20px;
+    color: #a1866f;
+    background: #fff;
+    border: none;
+
+}
+.game{
+    width: 900px;
+    height: 440px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.item{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    background-color: #fff;
+    transform: rotateY(180deg);
+    transition: 0.25s;
+}
+.item.boxOpen{
+    transform: rotateY(0deg);
+}
+.item::after{
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: #a1866f;
+    /* transition: 0.25s;
+    transform: rotateY(0deg); */
     backface-visibility: hidden;
 }
-/* 
-#9f8d1f
-#e8654b
-#ec8d00
-#b68e6b
-#e6d8bd
-#e6ceb6
-#e8d7b9
-*/
+.boxOpen::after,
+.boxMatch::after{
+    transform: rotateY(180deg);
+    transition: transform 0.25s;
+}
+.timer{
+    color: #fff;
+}
+.score{
+    color: #fff;
+}
